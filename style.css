@@ -3,41 +3,49 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5; /* Couleur de fond plus claire */
+    background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
 }
 
 /* Header Styles */
 header {
-    background-color: #333; /* Couleur sombre pour l'en-tête */
+    background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
-.header-content {
+header .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.profile {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 20px; /* Espacement entre l'image et le texte */
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .profile-photo {
     width: 150px;
+    height: 150px;
     border-radius: 50%;
 }
 
-.header-text {
-    max-width: 600px; /* Ajustez la largeur selon vos besoins */
+.profile-info {
+    max-width: 600px;
 }
 
-.header-text h1 {
+.profile-info h1 {
     font-size: 2.5em;
     margin: 0;
-    letter-spacing: 1px;
 }
 
-.header-text p {
+.profile-info p {
     margin: 10px 0;
     font-size: 1.2em;
 }
@@ -68,14 +76,14 @@ section.in-view {
 
 section h2 {
     font-size: 2em;
-    border-bottom: 2px solid #007bff; /* Ligne de séparation bleue */
+    border-bottom: 2px solid #007bff;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
 /* Lists */
 ul {
-    list-style-type: none; /* Supprime les puces par défaut */
+    list-style-type: none;
     padding: 0;
 }
 
@@ -86,19 +94,19 @@ ul li {
 
 /* Links */
 a {
-    color: #007bff; /* Couleur des liens */
+    color: #007bff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #0056b3; /* Couleur au survol */
+    color: #0056b3;
     text-decoration: underline;
 }
 
 /* Buttons */
 button {
-    background-color: #007bff; /* Couleur du bouton */
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -115,7 +123,7 @@ button:hover {
 
 /* Footer Styles */
 footer {
-    background-color: #333; /* Couleur sombre pour le pied de page */
+    background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -129,7 +137,7 @@ footer p {
 }
 
 footer a {
-    color: #ff6347; /* Couleur des liens dans le pied de page */
+    color: #ff6347;
     text-decoration: none;
 }
 
@@ -139,16 +147,13 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .header-content {
+    header .profile {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     .profile-photo {
         margin-bottom: 20px;
-    }
-
-    .header-text {
-        text-align: center;
     }
 }
