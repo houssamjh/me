@@ -31,9 +31,10 @@ header .container {
 }
 
 .profile-photo {
-    width: 180px; /* Augmenter la taille de la photo */
+    width: 180px; /* Taille de la photo */
     height: 180px;
     border-radius: 50%;
+    object-fit: cover; /* Assure que l'image remplit bien le cercle */
 }
 
 .profile-info {
@@ -43,12 +44,29 @@ header .container {
 .profile-info h1 {
     font-size: 2.5em;
     margin: 0;
+    font-weight: bold; /* Texte en gras pour le nom */
 }
 
-.profile-info p {
-    margin: 10px 0;
+.profile-info .role {
     font-size: 1.2em;
+    margin: 10px 0;
 }
+
+.profile-info .contact, .profile-info .address {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.profile-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.profile-info a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
 
 /* Main Content */
 main {
@@ -131,3 +149,5 @@ footer p {
         margin-bottom: 20px;
     }
 }
+
+
